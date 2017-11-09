@@ -1,4 +1,5 @@
 # 手工定义的 Proxy 列表
+flipboard.com
 
 #Telegram
 67.198.55.0/24
@@ -27,9 +28,6 @@ gist.github.com
 # 首页直连，但中文的维基百科必须翻墙
 wikipedia.org
 
-#20 开车
-t66y.com
-91porn.com
 
 #50 for whatsapp
 whatsapp.com

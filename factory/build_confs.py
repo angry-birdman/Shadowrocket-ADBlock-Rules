@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import io
 import re
 import time
 
@@ -16,7 +17,7 @@ confs_names = [
 
 
 def getRulesStringFromFile(path, kind):
-    file = open(path, 'r', encoding='utf-8')
+    file = io.open(path, 'r', encoding='utf-8')
     contents = file.readlines()
     ret = ''
 
@@ -40,8 +41,8 @@ def getRulesStringFromFile(path, kind):
 
 
 # get head and foot
-str_head = open('template/sr_head.txt', 'r', encoding='utf-8').read()
-str_foot = open('template/sr_foot.txt', 'r', encoding='utf-8').read()
+str_head = io.open('template/sr_head.txt', 'r', encoding='utf-8').read()
+str_foot = io.open('template/sr_foot.txt', 'r', encoding='utf-8').read()
 
 
 # make values
@@ -61,12 +62,12 @@ values['manual_reject'] = getRulesStringFromFile('manual_reject.txt', 'Reject')
 
 # make confs
 for conf_name in confs_names:
-    file_template = open('template/'+conf_name+'.txt', 'r', encoding='utf-8')
+    file_template = io.open('template/'+conf_name+'.txt', 'r', encoding='utf-8')
     template = file_template.read()
 
     template = str_head + template + str_foot
 
-    file_output = open('../'+conf_name+'.conf', 'w', encoding='utf-8')
+    file_output = io.open('../'+conf_name+'.conf', 'w', encoding='utf-8')
 
     marks = re.findall(r'{{(.+)}}', template)
 
