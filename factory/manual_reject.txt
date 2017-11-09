@@ -16,7 +16,6 @@ imageplus.baidu.com
 t10.baidu.com
 t11.baidu.com
 t12.baidu.com
-bdstatic.com
 
 # 未知广告 来自#49反馈
 stats.chinaz.com

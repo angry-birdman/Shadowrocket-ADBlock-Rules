@@ -1,5 +1,6 @@
 
 [URL Rewrite]
 ^http://(www.)?google.cn https://www.google.com header
+^(http|https):?.bdstatic.com/tb/mobileloader_? - reject
 
 # By Moshel @ https://hzy.pw/
